@@ -7,7 +7,7 @@ function scan(methods) {
   methods.fetchNewWall(config.group, cache.cache.wall_posts_scanned[config.group] || 0, 100).then(function(data) {
     if (data[0] != undefined) { cache.cache.wall_posts_scanned[config.group] = data[0].id; cache.save(); }
     for (let i in data) {
-      if (data[i] != undefined && data[i].body != undefined && data[i].poster != undefined)
+      if (data[i] != undefined && data[i].body != undefined && data[i].poster != undefined) {
         let content = data[i].body.toUpperCase();
         let level = 0;
         for (let word of config.banned_words) {
