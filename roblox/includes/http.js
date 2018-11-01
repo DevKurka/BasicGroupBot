@@ -21,14 +21,14 @@ async function send(url, jar, options) {
 module.exports = async function(url, jar, options, depth) {
   var depth = (depth != undefined) ? (depth + 1) : 1;
 
-  if (depth >= 3) {
+  if (depth > 3) {
     throw new Error("Attempted to send message " + depth + " times, but all attempts failed.");
   }
 
   return await send(url, jar, options).then(function(res) {
     if (res != undefined) {
-      if (options && options.headers ) {
-        if (res.statusCode == 403 && res.statusMessage == "Token Validation Failed") {
+      if (options != undefined && options.headers != undefined) {
+        if (res.statusCode == 403 && (res.statusMessage == "Token Validation Failed" || res.statusMessage == 'XSRF Token Validation Failed')) {
           var newToken = res.headers['x-csrf-token'];
           if (newToken != undefined) {
             if (options.headers == undefined) options.headers = {};
