@@ -5,8 +5,8 @@
   "login": "BasicGroupBotTest",
   "password": "13504590345",
 
-  "group": 2703710,
-  "scan_delay": 60000,
+  "group": 3170039,
+  "scan_delay": 6000000,
 
   "banned_words": [
     "Robux", "Free", "Scam"
