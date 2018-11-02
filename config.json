@@ -2,11 +2,11 @@
   "cache_path": "./cache.json",
 
   "login_type": "Username",
-  "login": "BasicGroupBotTest",
-  "password": "13504590345",
+  "login": "",
+  "password": "",
 
   "group": 3170039,
-  "scan_delay": 6000000,
+  "scan_delay": 60000,
 
   "banned_words": [
     "Robux", "Free", "Scam"
