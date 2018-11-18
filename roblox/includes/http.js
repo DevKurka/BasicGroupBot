@@ -34,7 +34,7 @@ module.exports = async function(url, jar, options, depth) {
             if (options.headers == undefined) options.headers = {};
             options.headers['X-CSRF-TOKEN'] = newToken;
             options.jar = jar;
-            return module.exports(url, jar, options, depth);
+            return await module.exports(url, jar, options, depth);
           } else {
             return undefined;
           }
