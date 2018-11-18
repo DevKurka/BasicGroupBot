@@ -5,13 +5,18 @@
   "login": "",
   "password": "",
 
-  "group": 3170039,
+  "group": 0,
   "scan_delay": 60000,
 
   "banned_words": [
-    "Robux", "Free", "Scam"
+    "Robux", "Free", "Scam", "Gamepass", "Builderman", "Website", "Verify", "Download", "Visit", "Pass"
   ],
-  "target_level": 1,
+  "target_level": 5,
   "op_ranks": 250,
-  "ban_role_id": 18105660
+  "ban_rank": 10,
+
+  "ban_message": {
+    "subject": "You have been banned!",
+    "body": "Hey! \n Our monitors have detected scams coming from your account. You have been moved to banned rank and you will be unabled to post on group wall. \n \n If you aren't a bot, please re-join the group in order to get your primary rank back. \n \n Regards!"
+  }
 }

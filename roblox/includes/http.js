@@ -22,7 +22,7 @@ module.exports = async function(url, jar, options, depth) {
   var depth = (depth != undefined) ? (depth + 1) : 1;
 
   if (depth > 3) {
-    throw new Error("Attempted to send message " + depth + " times, but all attempts failed.");
+    return undefined;
   }
 
   return await send(url, jar, options).then(function(res) {
@@ -36,12 +36,12 @@ module.exports = async function(url, jar, options, depth) {
             options.jar = jar;
             return module.exports(url, jar, options, depth);
           } else {
-            throw new Error('Could not refresh the token.');
+            return undefined;
           }
         }
       }
       return res;
     }
-    throw new Error("Couldn't fetch the response!");
+    return undefined;
   })
 };
