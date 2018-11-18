@@ -3,6 +3,8 @@ var cache = require("./cache.js");
 
 var roblox = require("./roblox");
 
+var runningScan = 0;
+
 async function scan(methods) {
   if (runningScan == 1) return;
   runningScan = 1;
