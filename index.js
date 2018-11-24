@@ -1,6 +1,8 @@
 var config = require("./config.json");
 var cache = require("./cache.js");
 
+process.on("unhandledRejection", console.log);
+
 var roblox = require("./roblox");
 
 var runningScan = 0;
