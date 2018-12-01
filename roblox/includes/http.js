@@ -25,7 +25,7 @@ module.exports = async function(url, jar, options, depth) {
     return undefined;
   }
 
-  return await send(url, jar, options).then(function(res) {
+  return await send(url, jar, options).then(async function(res) {
     if (res != undefined) {
       if (options != undefined && options.headers != undefined) {
         if (res.statusCode == 403 && (res.statusMessage == "Token Validation Failed" || res.statusMessage == 'XSRF Token Validation Failed')) {
