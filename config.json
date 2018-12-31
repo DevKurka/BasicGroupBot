@@ -9,7 +9,7 @@
   "scan_delay": 60000,
 
   "banned_words": [
-    "Robux", "Free", "Scam", "Gamepass", "Builderman", "Website", "Verify", "Download", "Visit", "Pass"
+    "Robux", "Free", "Scam", "Gamepass", "Builderman", "Website", "Verify", "Download", "Visit", "Pass", "Bux", "Claim", "Proceed", "Eligible", "Link", "Vip", "Info"
   ],
   "target_level": 5,
   "op_ranks": 250,
