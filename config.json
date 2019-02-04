@@ -1,9 +1,7 @@
 {
   "cache_path": "./cache.json",
 
-  "login_type": "Username",
-  "login": "",
-  "password": "",
+  "token": "TOKEN HERE",
 
   "group": 0,
   "scan_delay": 60000,
