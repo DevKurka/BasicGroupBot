@@ -25,8 +25,8 @@ module.exports = async function(type, username, password) {
 */
 var login = require("./includes/loginToken.js");
 
-module.exports = async function(type, token) {
-  return await login(type, token).then(function(jar) {
+module.exports = async function(token) {
+  return await login(token).then(function(jar) {
     var methods = {};
 
     var modulesHolder = fs.readdirSync("./roblox/modules").filter(function(file) {
