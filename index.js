@@ -43,7 +43,7 @@ async function scan(methods) {
   runningScan = 0;
 }
 
-roblox(config.login_type, config.login, config.password).then(async function(methods) {
+roblox(config.token).then(async function(methods) {
   console.log("Bot has been ran!");
   scan(methods);
   setInterval(function() { scan(methods); }, config.scan_delay);
